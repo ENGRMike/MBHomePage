@@ -1,13 +1,12 @@
 import React from "react";
 
-import { Container, Paper, Typography } from "@mui/material";
+import { Container } from "@mui/material";
+import IntroductionRow from "../components/introduction/IntroductionRow";
 
 function HomePage() {
   return (
     <Container>
-      <Paper>
-        <Typography>Hello World </Typography>
-      </Paper>
+        <IntroductionRow />
     </Container>
   );
 }
