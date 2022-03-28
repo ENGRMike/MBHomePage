@@ -1,20 +1,19 @@
 import React from "react";
-import { ThemeProvider } from "@mui/material/styles";
-import { Container, CssBaseline } from "@mui/material";
-import theme from "./app/theme";
+import { CssBaseline } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HomePage from "./components/homepage/Homepage";
+import HomePage from "./routes/Homepage";
+import ML from "./routes/ML";
 
 function App() {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Container>
-          <HomePage />
-        </Container>
-      </ThemeProvider>
-    </>
+    <BrowserRouter>
+      <CssBaseline />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="ML" element={<ML />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
